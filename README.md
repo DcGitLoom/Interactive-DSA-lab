@@ -75,6 +75,7 @@ The build is being done one topic per day. The table fills in as the days go by.
 | Day | Topic | Status |
 | - | - | - |
 | 1 | Project setup and the step tracing system | done |
+| 2 | Recursion in all five of its shapes | done |
 
 ## Documentation
 
