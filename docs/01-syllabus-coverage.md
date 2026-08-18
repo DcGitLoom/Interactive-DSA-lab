@@ -14,7 +14,7 @@ cover its edge cases, and a document explaining the cost of each operation.
 | Topic | Where it lives | Status |
 | - | - | - |
 | Recursion and its shapes (tail, tree, indirect, nested) | `dsalab/algorithms/recursion.py` | done |
-| Asymptotic notation, and measuring it for real | `dsalab/complexity.py` | pending |
+| Asymptotic notation, and measuring it for real | `dsalab/complexity.py` | done |
 | Static and dynamic memory, how Python objects sit in memory | `docs/02-arrays.md` | pending |
 
 ## Arrays and matrices
