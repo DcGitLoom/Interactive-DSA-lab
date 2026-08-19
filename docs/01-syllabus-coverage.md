@@ -15,17 +15,17 @@ cover its edge cases, and a document explaining the cost of each operation.
 | - | - | - |
 | Recursion and its shapes (tail, tree, indirect, nested) | `dsalab/algorithms/recursion.py` | done |
 | Asymptotic notation, and measuring it for real | `dsalab/complexity.py` | done |
-| Static and dynamic memory, how Python objects sit in memory | `docs/02-arrays.md` | pending |
+| Static and dynamic memory, how Python objects sit in memory | `docs/04-arrays.md` | done |
 
 ## Arrays and matrices
 
 | Topic | Where it lives | Status |
 | - | - | - |
-| Dynamic array (growth, amortised cost) | `dsalab/structures/dynamic_array.py` | pending |
-| Two dimensional arrays and row major layout | `docs/02-arrays.md` | pending |
-| Diagonal, triangular and band matrix representation | `dsalab/structures/special_matrix.py` | pending |
-| Sparse matrix representation and addition | `dsalab/structures/sparse_matrix.py` | pending |
-| Polynomial representation and evaluation | `dsalab/structures/polynomial.py` | pending |
+| Dynamic array (growth, amortised cost) | `dsalab/structures/dynamic_array.py` | done |
+| Two dimensional arrays and row major layout | `docs/04-arrays.md` | done |
+| Diagonal, triangular and band matrix representation | `dsalab/structures/special_matrix.py` | done |
+| Sparse matrix representation and addition | `dsalab/structures/sparse_matrix.py` | done |
+| Polynomial representation and evaluation | `dsalab/structures/polynomial.py` | done |
 
 ## Linked lists
 
@@ -112,7 +112,7 @@ cover its edge cases, and a document explaining the cost of each operation.
 | String matching: KMP, Rabin Karp, Z algorithm | `dsalab/algorithms/strings.py` | pending |
 | Disjoint set applications, Kruskal's dependency on it | `dsalab/structures/union_find.py` | pending |
 | Bit manipulation tricks used by the structures | `docs/21-bit-tricks.md` | pending |
-| Amortised analysis, explained through the dynamic array | `docs/02-arrays.md` | pending |
+| Amortised analysis, explained through the dynamic array | `docs/04-arrays.md` | done |
 
 ## The four things that make this more than a visualiser
 
