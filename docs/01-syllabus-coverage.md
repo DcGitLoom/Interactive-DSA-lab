@@ -31,10 +31,10 @@ cover its edge cases, and a document explaining the cost of each operation.
 
 | Topic | Where it lives | Status |
 | - | - | - |
-| Singly linked list | `dsalab/structures/linked_list.py` | pending |
-| Doubly linked list | `dsalab/structures/linked_list.py` | pending |
-| Circular linked list | `dsalab/structures/linked_list.py` | pending |
-| Reversal, cycle detection, merge of sorted lists | `dsalab/structures/linked_list.py` | pending |
+| Singly linked list | `dsalab/structures/linked_list.py` | done |
+| Doubly linked list | `dsalab/structures/linked_list.py` | done |
+| Circular linked list | `dsalab/structures/linked_list.py` | done |
+| Reversal, cycle detection, merge of sorted lists | `dsalab/structures/linked_list.py` | done |
 
 ## Stacks and queues
 
