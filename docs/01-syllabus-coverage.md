@@ -40,9 +40,9 @@ cover its edge cases, and a document explaining the cost of each operation.
 
 | Topic | Where it lives | Status |
 | - | - | - |
-| Stack | `dsalab/structures/stack.py` | pending |
-| Parenthesis matching | `dsalab/algorithms/expressions.py` | pending |
-| Infix to postfix and postfix evaluation | `dsalab/algorithms/expressions.py` | pending |
+| Stack | `dsalab/structures/stack.py` | done |
+| Parenthesis matching | `dsalab/algorithms/expressions.py` | done |
+| Infix to postfix, infix to prefix, postfix evaluation | `dsalab/algorithms/expressions.py` | done |
 | Queue, circular queue | `dsalab/structures/queue.py` | pending |
 | Deque | `dsalab/structures/deque.py` | pending |
 | Priority queue | `dsalab/structures/heap.py` | pending |

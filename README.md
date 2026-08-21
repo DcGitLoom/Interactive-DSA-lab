@@ -79,6 +79,7 @@ The build is being done one topic per day. The table fills in as the days go by.
 | 3 | Asymptotic notation and the complexity detective | done |
 | 4 | Arrays, amortised growth, special and sparse matrices, polynomials | done |
 | 5 | Linked lists: singly, doubly, circular, and the two pointer tricks | done |
+| 6 | Stacks, bracket matching, infix to postfix and prefix, evaluation | done |
 
 ## Documentation
 
