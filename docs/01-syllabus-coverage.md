@@ -43,8 +43,8 @@ cover its edge cases, and a document explaining the cost of each operation.
 | Stack | `dsalab/structures/stack.py` | done |
 | Parenthesis matching | `dsalab/algorithms/expressions.py` | done |
 | Infix to postfix, infix to prefix, postfix evaluation | `dsalab/algorithms/expressions.py` | done |
-| Queue, circular queue | `dsalab/structures/queue.py` | pending |
-| Deque | `dsalab/structures/deque.py` | pending |
+| Queue, circular queue, queue from two stacks | `dsalab/structures/queue.py` | done |
+| Deque, and sliding window maximum | `dsalab/structures/deque.py` | done |
 | Priority queue | `dsalab/structures/heap.py` | pending |
 
 ## Trees
