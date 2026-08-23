@@ -51,9 +51,9 @@ cover its edge cases, and a document explaining the cost of each operation.
 
 | Topic | Where it lives | Status |
 | - | - | - |
-| Binary tree, all four traversals, iterative and recursive | `dsalab/structures/binary_tree.py` | pending |
-| Building a tree from traversals, counting, height | `dsalab/structures/binary_tree.py` | pending |
-| Threaded binary tree | `dsalab/structures/threaded_tree.py` | pending |
+| Binary tree, all four traversals, iterative and recursive | `dsalab/structures/binary_tree.py` | done |
+| Building a tree from traversals, counting, height | `dsalab/structures/binary_tree.py` | done |
+| Threaded binary tree | `dsalab/structures/threaded_tree.py` | done |
 | Binary search tree | `dsalab/structures/bst.py` | pending |
 | AVL tree with all four rotations | `dsalab/structures/avl.py` | pending |
 | Red black tree | `dsalab/structures/red_black.py` | pending |

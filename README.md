@@ -81,6 +81,7 @@ The build is being done one topic per day. The table fills in as the days go by.
 | 5 | Linked lists: singly, doubly, circular, and the two pointer tricks | done |
 | 6 | Stacks, bracket matching, infix to postfix and prefix, evaluation | done |
 | 7 | Queues, circular buffers, deques and sliding window maximum | done |
+| 8 | Binary trees, four traversals twice over, threaded trees | done |
 
 ## Documentation
 
