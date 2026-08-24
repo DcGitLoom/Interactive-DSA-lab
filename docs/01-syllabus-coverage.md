@@ -54,7 +54,7 @@ cover its edge cases, and a document explaining the cost of each operation.
 | Binary tree, all four traversals, iterative and recursive | `dsalab/structures/binary_tree.py` | done |
 | Building a tree from traversals, counting, height | `dsalab/structures/binary_tree.py` | done |
 | Threaded binary tree | `dsalab/structures/threaded_tree.py` | done |
-| Binary search tree | `dsalab/structures/bst.py` | pending |
+| Binary search tree | `dsalab/structures/bst.py` | done |
 | AVL tree with all four rotations | `dsalab/structures/avl.py` | pending |
 | Red black tree | `dsalab/structures/red_black.py` | pending |
 | 2-3 tree and B tree | `dsalab/structures/btree.py` | pending |
@@ -127,10 +127,10 @@ Each is described in its own document when it is built.
    by frame, with live counters for comparisons and swaps. This is the fastest
    way to feel why insertion sort beats quick sort on tiny inputs and loses
    badly on large ones.
-3. **Invariant checking.** Every self balancing structure can state its own
-   rules in code, and in checked mode the rules are verified after every single
-   mutation. When a red black tree breaks, the app shows exactly which of the
-   five rules broke and on which node.
+3. **Invariant checking.** Built on day 9 in `dsalab/invariants.py`. Every
+   structure can state its own rules in code, and inside a `checked()` block the
+   rules are verified after every single mutation, naming the broken rule in
+   plain English and the node that broke it.
 4. **Counterexample finder.** For problems where a simple greedy method looks
    right but is not, the lab searches small inputs until it finds one where
    greedy and dynamic programming disagree, then shows both answers. Being
