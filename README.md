@@ -83,6 +83,7 @@ The build is being done one topic per day. The table fills in as the days go by.
 | 7 | Queues, circular buffers, deques and sliding window maximum | done |
 | 8 | Binary trees, four traversals twice over, threaded trees | done |
 | 9 | Binary search trees, ordered queries, and the invariant checker | done |
+| 10 | AVL trees, the four rotations, and a measured logarithmic height | done |
 
 ## Documentation
 
