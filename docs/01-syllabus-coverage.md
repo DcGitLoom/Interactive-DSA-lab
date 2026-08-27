@@ -57,7 +57,7 @@ cover its edge cases, and a document explaining the cost of each operation.
 | Binary search tree | `dsalab/structures/bst.py` | done |
 | AVL tree with all four rotations | `dsalab/structures/avl.py` | done |
 | Red black tree | `dsalab/structures/red_black.py` | done |
-| 2-3 tree and B tree | `dsalab/structures/btree.py` | pending |
+| 2-3 tree and B tree | `dsalab/structures/btree.py` | done |
 | Trie and compressed trie | `dsalab/structures/trie.py` | pending |
 | Segment tree and Fenwick tree | `dsalab/structures/segment_tree.py` | pending |
 
