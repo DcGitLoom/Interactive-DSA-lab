@@ -45,7 +45,7 @@ cover its edge cases, and a document explaining the cost of each operation.
 | Infix to postfix, infix to prefix, postfix evaluation | `dsalab/algorithms/expressions.py` | done |
 | Queue, circular queue, queue from two stacks | `dsalab/structures/queue.py` | done |
 | Deque, and sliding window maximum | `dsalab/structures/deque.py` | done |
-| Priority queue | `dsalab/structures/heap.py` | pending |
+| Priority queue, with decrease priority | `dsalab/structures/heap.py` | done |
 
 ## Trees
 
@@ -65,7 +65,7 @@ cover its edge cases, and a document explaining the cost of each operation.
 
 | Topic | Where it lives | Status |
 | - | - | - |
-| Binary heap, heapify, heap sort | `dsalab/structures/heap.py` | pending |
+| Binary heap, heapify, heap sort | `dsalab/structures/heap.py` | done |
 | Hash table with separate chaining | `dsalab/structures/hash_table.py` | pending |
 | Hash table with open addressing (linear, quadratic, double) | `dsalab/structures/hash_table.py` | pending |
 | LRU cache built from a hash map and a linked list | `dsalab/structures/lru_cache.py` | pending |

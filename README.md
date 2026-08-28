@@ -86,6 +86,7 @@ The build is being done one topic per day. The table fills in as the days go by.
 | 10 | AVL trees, the four rotations, and a measured logarithmic height | done |
 | 11 | Red black trees, all five rules checked after every operation | done |
 | 12 | B-trees and 2-3 trees, the shape built for disk | done |
+| 13 | Heaps, priority queues, heap sort, and the linear build proof | done |
 
 ## Documentation
 
