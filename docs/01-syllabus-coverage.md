@@ -66,9 +66,9 @@ cover its edge cases, and a document explaining the cost of each operation.
 | Topic | Where it lives | Status |
 | - | - | - |
 | Binary heap, heapify, heap sort | `dsalab/structures/heap.py` | done |
-| Hash table with separate chaining | `dsalab/structures/hash_table.py` | pending |
-| Hash table with open addressing (linear, quadratic, double) | `dsalab/structures/hash_table.py` | pending |
-| LRU cache built from a hash map and a linked list | `dsalab/structures/lru_cache.py` | pending |
+| Hash table with separate chaining | `dsalab/structures/hash_table.py` | done |
+| Hash table with open addressing (linear, quadratic, double) | `dsalab/structures/hash_table.py` | done |
+| LRU cache built from a hash map and a linked list | `dsalab/structures/lru_cache.py` | done |
 
 ## Sorting and searching
 
