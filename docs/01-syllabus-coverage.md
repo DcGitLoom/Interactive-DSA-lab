@@ -74,12 +74,12 @@ cover its edge cases, and a document explaining the cost of each operation.
 
 | Topic | Where it lives | Status |
 | - | - | - |
-| Bubble, insertion, selection | `dsalab/algorithms/sorting.py` | pending |
-| Merge sort, iterative and recursive | `dsalab/algorithms/sorting.py` | pending |
-| Quick sort and its pivot choices | `dsalab/algorithms/sorting.py` | pending |
-| Heap sort, shell sort | `dsalab/algorithms/sorting.py` | pending |
-| Counting sort, radix sort, bucket sort | `dsalab/algorithms/sorting.py` | pending |
-| Why comparison sorting cannot beat n log n | `docs/13-sorting.md` | pending |
+| Bubble, insertion, selection | `dsalab/algorithms/sorting.py` | done |
+| Merge sort, iterative and recursive | `dsalab/algorithms/sorting.py` | done |
+| Quick sort, its pivot choices, Lomuto and Hoare | `dsalab/algorithms/sorting.py` | done |
+| Heap sort, shell sort | `dsalab/algorithms/sorting.py` | done |
+| Counting sort, radix sort, bucket sort | `dsalab/algorithms/sorting.py` | done |
+| Why comparison sorting cannot beat n log n | `docs/15-sorting.md` | done |
 | Binary search and its variants (first, last, insertion point) | `dsalab/algorithms/searching.py` | pending |
 
 ## Graphs
