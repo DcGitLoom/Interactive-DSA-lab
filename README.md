@@ -89,6 +89,7 @@ The build is being done one topic per day. The table fills in as the days go by.
 | 13 | Heaps, priority queues, heap sort, and the linear build proof | done |
 | 14 | Hash tables, both collision strategies, and the LRU cache | done |
 | 15 | Eleven sorting algorithms and the n log n lower bound | done |
+| 16 | Binary search variants and string matching (KMP, Rabin Karp, Z) | done |
 
 ## Documentation
 

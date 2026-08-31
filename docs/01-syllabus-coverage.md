@@ -80,7 +80,7 @@ cover its edge cases, and a document explaining the cost of each operation.
 | Heap sort, shell sort | `dsalab/algorithms/sorting.py` | done |
 | Counting sort, radix sort, bucket sort | `dsalab/algorithms/sorting.py` | done |
 | Why comparison sorting cannot beat n log n | `docs/15-sorting.md` | done |
-| Binary search and its variants (first, last, insertion point) | `dsalab/algorithms/searching.py` | pending |
+| Binary search and its variants (first, last, insertion point) | `dsalab/algorithms/searching.py` | done |
 
 ## Graphs
 
@@ -109,7 +109,7 @@ cover its edge cases, and a document explaining the cost of each operation.
 
 | Topic | Where it lives | Status |
 | - | - | - |
-| String matching: KMP, Rabin Karp, Z algorithm | `dsalab/algorithms/strings.py` | pending |
+| String matching: KMP, Rabin Karp, Z algorithm | `dsalab/algorithms/strings.py` | done |
 | Disjoint set applications, Kruskal's dependency on it | `dsalab/structures/union_find.py` | pending |
 | Bit manipulation tricks used by the structures | `docs/21-bit-tricks.md` | pending |
 | Amortised analysis, explained through the dynamic array | `docs/04-arrays.md` | done |
