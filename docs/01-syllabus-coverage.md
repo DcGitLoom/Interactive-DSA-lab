@@ -58,8 +58,8 @@ cover its edge cases, and a document explaining the cost of each operation.
 | AVL tree with all four rotations | `dsalab/structures/avl.py` | done |
 | Red black tree | `dsalab/structures/red_black.py` | done |
 | 2-3 tree and B tree | `dsalab/structures/btree.py` | done |
-| Trie and compressed trie | `dsalab/structures/trie.py` | pending |
-| Segment tree and Fenwick tree | `dsalab/structures/segment_tree.py` | pending |
+| Trie and compressed trie | `dsalab/structures/trie.py` | done |
+| Segment tree (with lazy propagation) and Fenwick tree | `dsalab/structures/segment_tree.py` | done |
 
 ## Heaps and hashing
 
@@ -89,7 +89,7 @@ cover its edge cases, and a document explaining the cost of each operation.
 | Adjacency list and adjacency matrix | `dsalab/structures/graph.py` | pending |
 | Breadth first and depth first search | `dsalab/algorithms/graph_traversal.py` | pending |
 | Spanning trees, Prim, Kruskal | `dsalab/algorithms/mst.py` | pending |
-| Union find with union by rank and path compression | `dsalab/structures/union_find.py` | pending |
+| Union find with union by size and path compression | `dsalab/structures/union_find.py` | done |
 | Dijkstra, Bellman Ford, Floyd Warshall, A star | `dsalab/algorithms/shortest_path.py` | pending |
 | Topological sort, cycle detection | `dsalab/algorithms/graph_traversal.py` | pending |
 | Tarjan's strongly connected components | `dsalab/algorithms/scc.py` | pending |
@@ -110,8 +110,8 @@ cover its edge cases, and a document explaining the cost of each operation.
 | Topic | Where it lives | Status |
 | - | - | - |
 | String matching: KMP, Rabin Karp, Z algorithm | `dsalab/algorithms/strings.py` | done |
-| Disjoint set applications, Kruskal's dependency on it | `dsalab/structures/union_find.py` | pending |
-| Bit manipulation tricks used by the structures | `docs/21-bit-tricks.md` | pending |
+| Disjoint set applications, Kruskal's dependency on it | `dsalab/structures/union_find.py` | done |
+| Bit manipulation tricks used by the structures | `docs/17-tries-ranges-union-find.md` | done |
 | Amortised analysis, explained through the dynamic array | `docs/04-arrays.md` | done |
 
 ## The four things that make this more than a visualiser

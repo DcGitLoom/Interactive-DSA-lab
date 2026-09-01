@@ -90,6 +90,7 @@ The build is being done one topic per day. The table fills in as the days go by.
 | 14 | Hash tables, both collision strategies, and the LRU cache | done |
 | 15 | Eleven sorting algorithms and the n log n lower bound | done |
 | 16 | Binary search variants and string matching (KMP, Rabin Karp, Z) | done |
+| 17 | Tries, segment and Fenwick trees, union find | done |
 
 ## Documentation
 
