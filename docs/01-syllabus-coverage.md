@@ -86,13 +86,13 @@ cover its edge cases, and a document explaining the cost of each operation.
 
 | Topic | Where it lives | Status |
 | - | - | - |
-| Adjacency list and adjacency matrix | `dsalab/structures/graph.py` | pending |
-| Breadth first and depth first search | `dsalab/algorithms/graph_traversal.py` | pending |
-| Spanning trees, Prim, Kruskal | `dsalab/algorithms/mst.py` | pending |
+| Adjacency list and adjacency matrix | `dsalab/structures/graph.py` | done |
+| Breadth first and depth first search | `dsalab/algorithms/graph_traversal.py` | done |
+| Spanning trees, Prim, Kruskal | `dsalab/algorithms/mst.py` | done |
 | Union find with union by size and path compression | `dsalab/structures/union_find.py` | done |
-| Dijkstra, Bellman Ford, Floyd Warshall, A star | `dsalab/algorithms/shortest_path.py` | pending |
-| Topological sort, cycle detection | `dsalab/algorithms/graph_traversal.py` | pending |
-| Tarjan's strongly connected components | `dsalab/algorithms/scc.py` | pending |
+| Dijkstra, Bellman Ford, Floyd Warshall, A star | `dsalab/algorithms/shortest_path.py` | done |
+| Topological sort, cycle detection, bipartite check | `dsalab/algorithms/graph_traversal.py` | done |
+| Tarjan's and Kosaraju's strongly connected components | `dsalab/algorithms/scc.py` | done |
 
 ## Algorithm design techniques
 
