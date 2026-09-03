@@ -98,12 +98,12 @@ cover its edge cases, and a document explaining the cost of each operation.
 
 | Topic | Where it lives | Status |
 | - | - | - |
-| Greedy: activity selection, fractional knapsack, Huffman coding | `dsalab/algorithms/greedy.py` | pending |
-| Dynamic programming: LIS, 0/1 knapsack, matrix chain, coin change, LCS, edit distance | `dsalab/algorithms/dp.py` | pending |
-| Backtracking: N queens, sudoku, permutations, graph colouring, Hamiltonian cycle | `dsalab/algorithms/backtracking.py` | pending |
-| Branch and bound: travelling salesman | `dsalab/algorithms/branch_and_bound.py` | pending |
-| Where greedy fails and dynamic programming does not | `dsalab/algorithms/greedy_vs_dp.py` | pending |
-| NP hard and NP complete, in plain English | `docs/20-np-completeness.md` | pending |
+| Greedy: activity selection, fractional knapsack, Huffman coding | `dsalab/algorithms/greedy.py` | done |
+| Dynamic programming: LIS, 0/1 knapsack, matrix chain, coin change, LCS, edit distance, subset sum | `dsalab/algorithms/dp.py` | done |
+| Backtracking: N queens, sudoku, permutations, graph colouring, Hamiltonian cycle, maze | `dsalab/algorithms/backtracking.py` | done |
+| Branch and bound: travelling salesman and knapsack | `dsalab/algorithms/branch_and_bound.py` | done |
+| Where greedy fails and dynamic programming does not | `dsalab/algorithms/greedy_vs_dp.py` | done |
+| NP hard and NP complete, in plain English | `docs/20-np-completeness.md` | done |
 
 ## Extra topics the course does not cover
 
@@ -131,8 +131,8 @@ Each is described in its own document when it is built.
    structure can state its own rules in code, and inside a `checked()` block the
    rules are verified after every single mutation, naming the broken rule in
    plain English and the node that broke it.
-4. **Counterexample finder.** For problems where a simple greedy method looks
-   right but is not, the lab searches small inputs until it finds one where
-   greedy and dynamic programming disagree, then shows both answers. Being
-   handed a concrete failing case is far more convincing than being told that
-   greedy is not always optimal.
+4. **Counterexample finder.** Built on day 19 in `dsalab/algorithms/greedy_vs_dp.py`.
+   It searches small inputs, smallest first, until greedy and the correct method
+   disagree, then reports both answers with an explanation. It rediscovered the
+   classic coins 1, 3, 4 making 6 on its own. A report that finds nothing says so
+   honestly rather than implying greedy is safe.

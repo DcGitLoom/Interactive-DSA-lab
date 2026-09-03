@@ -92,6 +92,7 @@ The build is being done one topic per day. The table fills in as the days go by.
 | 16 | Binary search variants and string matching (KMP, Rabin Karp, Z) | done |
 | 17 | Tries, segment and Fenwick trees, union find | done |
 | 18 | Graphs: traversal, topological sort, SCC, MST, shortest paths | done |
+| 19 | Greedy, dynamic programming, backtracking, branch and bound, counterexample finder | done |
 
 ## Documentation
 
