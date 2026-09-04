@@ -25,8 +25,6 @@ in a millisecond and not finishing.
 
 from __future__ import annotations
 
-from collections.abc import Iterator
-
 from dsalab.tracing import Step, Traced, run
 
 

@@ -9,7 +9,12 @@ import random
 
 import pytest
 
-from dsalab.structures.deque import Deque, DequeEmptyError, sliding_window_maximum
+from dsalab.structures.deque import (
+    Deque,
+    DequeEmptyError,
+    sliding_window_maximum,
+    sliding_window_maximum_traced,
+)
 from dsalab.structures.queue import (
     CircularQueue,
     DynamicQueue,
@@ -19,7 +24,6 @@ from dsalab.structures.queue import (
     QueueFullError,
 )
 from dsalab.tracing import count_kinds, record
-from dsalab.structures.deque import sliding_window_maximum_traced
 
 GROWABLE_QUEUES = [DynamicQueue, LinkedQueue, QueueFromTwoStacks]
 

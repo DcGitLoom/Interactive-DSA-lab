@@ -9,7 +9,7 @@ import random
 
 import pytest
 
-from dsalab.invariants import checked, verify
+from dsalab.invariants import checked
 from dsalab.structures.segment_tree import FenwickTree, LazySegmentTree, SegmentTree
 from dsalab.structures.trie import CompressedTrie, Trie
 from dsalab.structures.union_find import UnionFind, UnionFindWithoutOptimisations

@@ -11,7 +11,6 @@ import random
 
 import pytest
 
-from dsalab.complexity import detect
 from dsalab.algorithms.sorting import (
     ALL_SORTS,
     COMPARISON_SORTS,
@@ -28,6 +27,7 @@ from dsalab.algorithms.sorting import (
     selection_sort_traced,
     shell_sort_traced,
 )
+from dsalab.complexity import detect
 from dsalab.structures.heap import heap_sort
 from dsalab.tracing import count_kinds, record
 

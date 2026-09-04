@@ -76,9 +76,17 @@ Two things worth keeping from this:
    was right. The only symptom was the wall clock, and nothing was watching the
    wall clock until day 20.
 
-There is now a test, `test_the_sorting_benchmarks_measure_what_they_claim`, that
-fails if the timed curve for any n log n sort stops matching, so this cannot come
-back quietly.
+There is now a test that fails if any n log n sort starts timing like a quadratic
+one, so this cannot come back quietly.
+
+Writing that test taught its own lesson. The first version asserted the fitted
+curve was n log n, and it **passed on its own and failed inside the full suite**,
+because fitting a curve to four timings is sensitive to whatever else the machine
+is doing. It now checks the doubling ratio instead: doubling the input should
+roughly double the time (n log n grows by about 2.2) rather than quadruple it. That
+is a blunter question and a far more robust one. **A timing test has to be written
+for a machine that is busy**, or it becomes the flaky test everybody learns to
+ignore.
 
 ## A second, smaller mistake worth recording
 

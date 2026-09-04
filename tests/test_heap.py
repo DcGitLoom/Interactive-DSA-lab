@@ -245,7 +245,7 @@ class TestPriorityQueue:
         queue = PriorityQueue()
         live: dict[str, int] = {}
 
-        for step in range(600):
+        for _ in range(600):
             action = rng.random()
             if action < 0.5 or not live:
                 item = f"item{rng.randint(0, 80)}"

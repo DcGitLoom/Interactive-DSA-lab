@@ -433,7 +433,7 @@ class TestLRUCache:
         values: dict[str, int] = {}
 
         with checked():
-            for step in range(2000):
+            for _ in range(2000):
                 key = f"k{rng.randint(0, 20)}"
                 if rng.random() < 0.6:
                     value = rng.randint(0, 100)

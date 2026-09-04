@@ -48,7 +48,6 @@ from dsalab.algorithms.greedy import (
     fixed_width_length,
     fractional_knapsack,
     greedy_coin_change,
-    greedy_knapsack_01,
     huffman_coding,
     huffman_decode,
     huffman_encoded_length,
@@ -314,7 +313,9 @@ class TestDynamicProgramming:
     def test_matrix_chain_matches_an_exhaustive_search(self):
         rng = random.Random(20260903)
 
-        def brute(dimensions, start, end, cache={}):
+        cache: dict = {}
+
+        def brute(dimensions, start, end):
             if start == end:
                 return 0
             key = (tuple(dimensions), start, end)

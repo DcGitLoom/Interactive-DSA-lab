@@ -23,7 +23,6 @@ distance.
 from __future__ import annotations
 
 from collections.abc import Callable
-from typing import Any
 
 from dsalab.structures.graph import Graph, Vertex
 from dsalab.structures.heap import PriorityQueue
@@ -50,7 +49,9 @@ def rebuild_path(came_from: dict[Vertex, Vertex | None], goal: Vertex) -> list[V
     return path
 
 
-def dijkstra(graph: Graph, start: Vertex) -> tuple[dict[Vertex, float], dict[Vertex, Vertex | None]]:
+def dijkstra(
+    graph: Graph, start: Vertex
+) -> tuple[dict[Vertex, float], dict[Vertex, Vertex | None]]:
     return run(dijkstra_traced(graph, start))
 
 

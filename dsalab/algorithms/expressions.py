@@ -327,7 +327,12 @@ def evaluate_postfix_traced(
                 try:
                     value = float(token)
                 except ValueError:
-                    raise ValueError(f"{token!r} has no value, so the expression cannot be worked out")
+                    # `from None` because the underlying float() failure adds
+                    # nothing: the caller wants to know their token has no value,
+                    # not to read a traceback about string parsing.
+                    raise ValueError(
+                        f"{token!r} has no value, so the expression cannot be worked out"
+                    ) from None
             values.push(value)
             yield Step(
                 "push",

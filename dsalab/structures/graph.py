@@ -33,7 +33,6 @@ from __future__ import annotations
 
 from collections.abc import Hashable, Iterable, Iterator
 from dataclasses import dataclass
-from typing import Any
 
 from dsalab.invariants import Violation
 

@@ -17,7 +17,7 @@ looking at it. It is the same instinct as separating the tracing from the drawin
 
 from __future__ import annotations
 
-from collections.abc import Callable, Sequence
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import Any
 

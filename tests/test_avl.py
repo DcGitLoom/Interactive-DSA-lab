@@ -13,7 +13,7 @@ import pytest
 
 from dsalab.complexity import detect
 from dsalab.invariants import checked
-from dsalab.structures.avl import AVLTree, _balance_factor, _height
+from dsalab.structures.avl import AVLTree, _balance_factor
 from dsalab.structures.bst import BinarySearchTree
 from dsalab.tracing import count_kinds, record
 

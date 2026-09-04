@@ -14,8 +14,8 @@ up again where it matters more.
 
 from __future__ import annotations
 
+from collections.abc import Iterable, Iterator
 from dataclasses import dataclass
-from typing import Iterable, Iterator
 
 from dsalab.tracing import Step, Traced, run
 

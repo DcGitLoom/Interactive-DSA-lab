@@ -196,19 +196,34 @@ class TestBenchmarkDefinitions:
                 assert all(value >= 0 for value in result.timings)
                 assert result.summary().endswith(".")
 
-    def test_the_sorting_benchmarks_measure_what_they_claim(self):
-        # This is the check that caught the day 20 bug: every sorting step used to
-        # carry a copy of the whole array, so merge sort timed as quadratic while
-        # its comparison count was still n log n.
+    def test_the_sorting_benchmarks_do_not_time_as_quadratic(self):
+        # This guards the day 20 bug: every sorting step used to carry a copy of
+        # the whole array, so merge sort *timed* as quadratic while its comparison
+        # count stayed n log n.
+        #
+        # It checks the doubling ratio rather than the fitted curve. An earlier
+        # version asserted the fitted curve was n log n, and it passed alone and
+        # failed inside the full suite, because curve fitting over four noisy
+        # timings is sensitive to whatever else the machine is doing. The ratio is
+        # the blunter and more robust question: doubling the input should roughly
+        # double the time (n log n grows by about 2.2), not quadruple it (n^2
+        # grows by 4). Three sits between them with room on both sides.
+        #
+        # A timing test has to be built for a machine that is busy, or it becomes
+        # the flaky test everybody learns to ignore.
         from benchmarks.run import sorting_comparison
 
-        comparison = sorting_comparison([200, 400, 800, 1600])
+        comparison = sorting_comparison([400, 800, 1600])
         by_name = {result.name: result for result in comparison.results}
 
         for name in ("merge sort", "quick sort (median of three)", "heap sort"):
-            assert by_name[name].matches_claim, (
-                f"{name} measured as {by_name[name].verdict.best.curve} rather than "
-                "n log n, which usually means something is copying the data per step"
+            timings = by_name[name].timings
+            ratio = timings[-1] / timings[-2]
+
+            assert ratio < 3.0, (
+                f"{name} took {ratio:.1f} times longer when the input doubled. Around 2.2 "
+                "is n log n and 4 is quadratic, so this suggests something is copying "
+                "the data on every step again."
             )
 
     def test_the_tree_benchmark_shows_why_balancing_matters(self):

@@ -170,7 +170,11 @@ def measure(
         best = float("inf")
         for _ in range(repeats):
             prepared = build_input(size)
-            best = min(best, time_once(lambda: operation(prepared)))
+            # `prepared` is bound as a default argument rather than captured, so
+            # the lambda cannot pick up a later value. It happens to be called
+            # immediately here, but a closure over a loop variable is a trap worth
+            # not leaving lying around.
+            best = min(best, time_once(lambda ready=prepared: operation(ready)))
         timings.append(best)
 
     return BenchmarkResult(name, claimed, list(sizes), timings, detect(sizes, timings), notes)

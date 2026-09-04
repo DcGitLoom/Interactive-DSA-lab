@@ -21,8 +21,9 @@ animation honest: what you see on screen is the code that the tests run.
 
 from __future__ import annotations
 
+from collections.abc import Generator
 from dataclasses import dataclass, field
-from typing import Any, Generator, TypeVar
+from typing import Any, TypeVar
 
 T = TypeVar("T")
 

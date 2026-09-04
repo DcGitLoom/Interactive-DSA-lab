@@ -163,7 +163,9 @@ def kmp_search_traced(text: str, pattern: str) -> Traced[list[int]]:
     return found
 
 
-def rabin_karp_search(text: str, pattern: str, base: int = 256, modulus: int = 1_000_000_007) -> list[int]:
+def rabin_karp_search(
+    text: str, pattern: str, base: int = 256, modulus: int = 1_000_000_007
+) -> list[int]:
     return run(rabin_karp_search_traced(text, pattern, base, modulus))
 
 

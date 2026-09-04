@@ -229,7 +229,9 @@ def combinations(n: int, r: int) -> Traced[int]:
     return result
 
 
-def towers_of_hanoi(disks: int, source: str = "A", helper: str = "B", target: str = "C") -> Traced[list[tuple[int, str, str]]]:
+def towers_of_hanoi(
+    disks: int, source: str = "A", helper: str = "B", target: str = "C"
+) -> Traced[list[tuple[int, str, str]]]:
     """Move a stack of disks from source to target, never putting a big disk on a small one.
 
     The recursive insight is that to move n disks you move the top n-1 out of the

@@ -24,8 +24,6 @@ Everything else in this module is depth first search with bookkeeping added.
 
 from __future__ import annotations
 
-from typing import Any
-
 from dsalab.structures.deque import Deque
 from dsalab.structures.graph import Graph, Vertex
 from dsalab.structures.stack import ArrayStack

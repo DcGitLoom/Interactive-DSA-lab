@@ -112,7 +112,11 @@ class BinarySearchTree:
                 f"{value!r} is {'smaller' if going_left else 'larger'} than "
                 f"{current.value!r}, so the whole {'right' if going_left else 'left'} "
                 "subtree can be ignored.",
-                {"at": current.value, "depth": depth, "direction": "left" if going_left else "right"},
+                {
+                    "at": current.value,
+                    "depth": depth,
+                    "direction": "left" if going_left else "right",
+                },
             )
             current = current.left if going_left else current.right
             depth += 1
