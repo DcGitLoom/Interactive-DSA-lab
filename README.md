@@ -8,6 +8,11 @@ per day for twenty days. Every commit is one day of study, so the history is a
 record of how the understanding was built rather than a single dump of finished
 code.
 
+The whole thing was written locally over those twenty days, committing at the end
+of each day's session, and pushed to GitHub in one go at the end. That is why the
+commit dates run from 16 August to 4 September while the repository itself only
+appears later: the work was done offline first and the remote came afterwards.
+
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev,app]"
