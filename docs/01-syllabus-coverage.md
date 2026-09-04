@@ -119,14 +119,14 @@ cover its edge cases, and a document explaining the cost of each operation.
 These are the features that carry the project beyond drawing bars on a screen.
 Each is described in its own document when it is built.
 
-1. **Complexity detective.** The harness times a function across growing input
-   sizes, fits the measurements against the standard growth curves, and reports
-   which one actually matches. You get told that your hash table lookup measured
-   as constant time rather than being asked to believe it.
-2. **Race mode.** Two algorithms run on the identical input side by side, frame
-   by frame, with live counters for comparisons and swaps. This is the fastest
-   way to feel why insertion sort beats quick sort on tiny inputs and loses
-   badly on large ones.
+1. **Complexity detective.** Built on day 3 in `dsalab/complexity.py` and wired
+   into the benchmark harness on day 20. It fits every standard growth curve to
+   real measurements and reports which one matches, so each complexity claim in
+   the project is checked rather than believed.
+2. **Race mode.** Built on day 20 in `app/presentation.py`. Two algorithms on
+   identical input, frame by frame, with live counters. The winner changes with
+   the input, and there are tests pinning both outcomes: merge sort wins on
+   reversed input, insertion sort wins on nearly sorted input.
 3. **Invariant checking.** Built on day 9 in `dsalab/invariants.py`. Every
    structure can state its own rules in code, and inside a `checked()` block the
    rules are verified after every single mutation, naming the broken rule in

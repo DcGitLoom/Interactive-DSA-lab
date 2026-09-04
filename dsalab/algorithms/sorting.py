@@ -46,7 +46,7 @@ import random
 from collections.abc import Callable, Sequence
 from typing import Any
 
-from dsalab.tracing import Step, Traced, run
+from dsalab.tracing import Step, Traced, run, snapshot
 
 Key = Callable[[Any], Any]
 
@@ -87,7 +87,7 @@ def bubble_sort_traced(values: Sequence[Any], key: Key | None = None) -> Traced[
             yield Step(
                 "compare",
                 f"Is {items[index]!r} bigger than {items[index + 1]!r}?",
-                {"indices": [index, index + 1], "array": list(items)},
+                {"indices": [index, index + 1], "array": snapshot(items)},
             )
             if key(items[index]) > key(items[index + 1]):
                 items[index], items[index + 1] = items[index + 1], items[index]
@@ -95,7 +95,7 @@ def bubble_sort_traced(values: Sequence[Any], key: Key | None = None) -> Traced[
                 yield Step(
                     "swap",
                     f"Yes, so they swap. {items[index]!r} moves left.",
-                    {"indices": [index, index + 1], "array": list(items)},
+                    {"indices": [index, index + 1], "array": snapshot(items)},
                 )
 
         if not swapped:
@@ -103,7 +103,7 @@ def bubble_sort_traced(values: Sequence[Any], key: Key | None = None) -> Traced[
                 "done",
                 "A whole pass with no swaps means everything is already in order, "
                 "so there is nothing left to do.",
-                {"array": list(items)},
+                {"array": snapshot(items)},
             )
             break
 
@@ -140,7 +140,7 @@ def selection_sort_traced(values: Sequence[Any], key: Key | None = None) -> Trac
                 "compare",
                 f"Is {items[index]!r} smaller than the smallest so far, "
                 f"{items[smallest]!r}?",
-                {"indices": [index, smallest], "array": list(items)},
+                {"indices": [index, smallest], "array": snapshot(items)},
             )
             if key(items[index]) < key(items[smallest]):
                 smallest = index
@@ -151,7 +151,7 @@ def selection_sort_traced(values: Sequence[Any], key: Key | None = None) -> Trac
                 "swap",
                 f"{items[position]!r} was the smallest left, so it swaps into "
                 f"position {position}.",
-                {"indices": [position, smallest], "array": list(items)},
+                {"indices": [position, smallest], "array": snapshot(items)},
             )
 
     return items
@@ -194,7 +194,7 @@ def insertion_sort_traced(values: Sequence[Any], key: Key | None = None) -> Trac
                 "compare",
                 f"Does {items[index]!r} need to move right to make room for "
                 f"{current!r}?",
-                {"indices": [index, index + 1], "array": list(items)},
+                {"indices": [index, index + 1], "array": snapshot(items)},
             )
             if key(items[index]) <= key(current):
                 break
@@ -203,7 +203,7 @@ def insertion_sort_traced(values: Sequence[Any], key: Key | None = None) -> Trac
             yield Step(
                 "shift",
                 f"{items[index]!r} shifts one place right.",
-                {"indices": [index, index + 1], "array": list(items)},
+                {"indices": [index, index + 1], "array": snapshot(items)},
             )
             index -= 1
 
@@ -211,7 +211,7 @@ def insertion_sort_traced(values: Sequence[Any], key: Key | None = None) -> Trac
         yield Step(
             "place",
             f"{current!r} settles into position {index + 1}.",
-            {"index": index + 1, "array": list(items)},
+            {"index": index + 1, "array": snapshot(items)},
         )
 
     return items
@@ -287,7 +287,7 @@ def shell_sort_traced(values: Sequence[Any], key: Key | None = None) -> Traced[l
 
     while gap >= 1:
         yield Step("gap", f"Sorting items that are {gap} apart.", {"gap": gap,
-                                                                   "array": list(items)})
+                                                                   "array": snapshot(items)})
 
         for position in range(gap, len(items)):
             current = items[position]
@@ -297,7 +297,7 @@ def shell_sort_traced(values: Sequence[Any], key: Key | None = None) -> Traced[l
                 yield Step(
                     "compare",
                     f"Comparing {items[index - gap]!r} and {current!r}, {gap} apart.",
-                    {"indices": [index - gap, index], "gap": gap, "array": list(items)},
+                    {"indices": [index - gap, index], "gap": gap, "array": snapshot(items)},
                 )
                 if key(items[index - gap]) <= key(current):
                     break
@@ -305,7 +305,7 @@ def shell_sort_traced(values: Sequence[Any], key: Key | None = None) -> Traced[l
                 yield Step(
                     "shift",
                     f"{items[index]!r} jumps {gap} places, which is the point of the gap.",
-                    {"indices": [index - gap, index], "array": list(items)},
+                    {"indices": [index - gap, index], "array": snapshot(items)},
                 )
                 index -= gap
 
@@ -356,7 +356,7 @@ def merge_sort_traced(values: Sequence[Any], key: Key | None = None) -> Traced[l
         yield Step(
             "split",
             f"Splitting positions {low} to {high - 1} into two halves at {middle}.",
-            {"low": low, "middle": middle, "high": high, "array": list(items)},
+            {"low": low, "middle": middle, "high": high, "array": snapshot(items)},
         )
         yield from sort(low, middle)
         yield from sort(middle, high)
@@ -372,7 +372,7 @@ def merge_sort_traced(values: Sequence[Any], key: Key | None = None) -> Traced[l
             yield Step(
                 "compare",
                 f"Which goes next, {left[a]!r} or {right[b]!r}?",
-                {"left": left[a], "right": right[b], "array": list(items)},
+                {"left": left[a], "right": right[b], "array": snapshot(items)},
             )
             # <= rather than < is what makes this stable.
             if key(left[a]) <= key(right[b]):
@@ -395,7 +395,7 @@ def merge_sort_traced(values: Sequence[Any], key: Key | None = None) -> Traced[l
         yield Step(
             "merged",
             f"Positions {low} to {high - 1} are now sorted: {items[low:high]!r}.",
-            {"low": low, "high": high, "array": list(items)},
+            {"low": low, "high": high, "array": snapshot(items)},
         )
 
     yield from sort(0, len(items))
@@ -520,7 +520,7 @@ def quick_sort_traced(
         yield Step(
             "pivot",
             f"Chose {pivot_value!r} as the pivot for positions {low} to {high}.",
-            {"pivot": pivot_value, "low": low, "high": high, "array": list(items)},
+            {"pivot": pivot_value, "low": low, "high": high, "array": snapshot(items)},
         )
 
         boundary = low
@@ -528,7 +528,7 @@ def quick_sort_traced(
             yield Step(
                 "compare",
                 f"Is {items[index]!r} smaller than the pivot {pivot_value!r}?",
-                {"indices": [index, high], "array": list(items)},
+                {"indices": [index, high], "array": snapshot(items)},
             )
             if key(items[index]) < key(pivot_value):
                 if boundary != index:
@@ -536,7 +536,7 @@ def quick_sort_traced(
                     yield Step(
                         "swap",
                         f"Yes, so {items[boundary]!r} moves to the left side.",
-                        {"indices": [boundary, index], "array": list(items)},
+                        {"indices": [boundary, index], "array": snapshot(items)},
                     )
                 boundary += 1
 
@@ -545,7 +545,7 @@ def quick_sort_traced(
             "place",
             f"The pivot {pivot_value!r} lands at position {boundary}, and it is now in "
             "its final place forever.",
-            {"index": boundary, "array": list(items)},
+            {"index": boundary, "array": snapshot(items)},
         )
 
         yield from sort(low, boundary - 1)
@@ -657,7 +657,7 @@ def counting_sort_traced(values: Sequence[int]) -> Traced[list[int]]:
             "place",
             f"Placed {value!r} at position {counts[value - low]}. Walking the input "
             "backwards is what keeps equal values in their original order.",
-            {"value": value, "index": counts[value - low], "array": list(output)},
+            {"value": value, "index": counts[value - low], "array": snapshot(output)},
         )
 
     return output
@@ -708,7 +708,7 @@ def radix_sort_traced(values: Sequence[int], base: int = 10) -> Traced[list[int]
                 "digit",
                 f"Sorted by the digit in the {place}s column, giving {result!r}. This "
                 "pass must be stable or the earlier passes are undone.",
-                {"place": place, "array": list(result)},
+                {"place": place, "array": snapshot(result)},
             )
             place *= base
 

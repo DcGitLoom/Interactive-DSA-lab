@@ -38,7 +38,7 @@ from collections.abc import Callable, Iterable
 from typing import Any
 
 from dsalab.invariants import Violation, verify_if_checking
-from dsalab.tracing import Step, Traced, run
+from dsalab.tracing import Step, Traced, run, snapshot
 
 
 class BinaryHeap:
@@ -490,7 +490,7 @@ def heap_sort_traced(values: list[Any], reverse: bool = False) -> Traced[list[An
             yield Step(
                 "swap",
                 f"{items[index]!r} sinks below {items[best]!r} to restore the heap.",
-                {"from": index, "to": best, "array": list(items)},
+                {"from": index, "to": best, "array": snapshot(items)},
             )
             items[index], items[best] = items[best], items[index]
             index = best
@@ -498,14 +498,14 @@ def heap_sort_traced(values: list[Any], reverse: bool = False) -> Traced[list[An
     for start in range(size // 2 - 1, -1, -1):
         yield from sift_down(start, size)
     yield Step("built", "The whole array is now a heap, built in linear time.",
-               {"array": list(items)})
+               {"array": snapshot(items)})
 
     for end in range(size - 1, 0, -1):
         yield Step(
             "extract",
             f"{items[0]!r} is the best remaining item, so it swaps into position {end} "
             "and the heap shrinks by one.",
-            {"value": items[0], "to": end, "array": list(items)},
+            {"value": items[0], "to": end, "array": snapshot(items)},
         )
         items[0], items[end] = items[end], items[0]
         yield from sift_down(0, end)
